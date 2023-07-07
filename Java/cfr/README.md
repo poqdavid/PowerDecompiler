@@ -1,0 +1,106 @@
+
+##### Example:
+
+`java -jar cfr.jar --extraclasspath c:\Java\rt.jar;c:\Java\commons-io.jar binary.jar`
+
+### Command-line options
+
+```
+   --aexagg                         (boolean)
+   --aexagg2                        (boolean)
+   --aggressivedocopy               (int >= 0)  default: 0
+   --aggressivedoextension          (boolean)
+   --aggressiveduff                 (boolean)
+   --aggressivesizethreshold        (int >= 0)  default: 13000
+   --allowcorrecting                (boolean)  default: true
+   --allowmalformedswitch           (boolean)
+   --analyseas                      (One of [DETECT, JAR, WAR, CLASS])
+   --antiobf                        (boolean)  default: false
+   --arrayiter                      (boolean)  default: true if class file from version 49.0 (Java 5) or greater
+   --caseinsensitivefs              (boolean)  default: true
+   --clobber                        (boolean)
+   --collectioniter                 (boolean)  default: true if class file from version 49.0 (Java 5) or greater
+   --commentmonitors                (boolean)  default: false
+   --comments                       (boolean)  default: true
+   --constobf                       (boolean)  default: Value of option 'antiobf'
+   --decodeenumswitch               (boolean)  default: true if class file from version 49.0 (Java 5) or greater
+   --decodefinally                  (boolean)  default: true
+   --decodelambdas                  (boolean)  default: true if class file from version 52.0 (Java 8) or greater
+   --decodestringswitch             (boolean)  default: true if class file from version 51.0 (Java 7) or greater
+   --dumpclasspath                  (boolean)  default: false
+   --eclipse                        (boolean)  default: true
+   --elidescala                     (boolean)  default: false
+   --extraclasspath                 (string)
+   --forbidanonymousclasses         (boolean)  default: false
+   --forbidmethodscopedclasses      (boolean)  default: false
+   --forceclassfilever              (string, specifying either java version as 'j6', 'j1.0', or classfile as '56', '56.65535')
+   --forcecondpropagate             (boolean)
+   --forceexceptionprune            (boolean)
+   --forcereturningifs              (boolean)
+   --forcetopsort                   (boolean)
+   --forcetopsortaggress            (boolean)
+   --forcetopsortnopull             (boolean)
+   --forloopaggcapture              (boolean)
+   --hidebridgemethods              (boolean)  default: Value of option 'obfattr'
+   --hidelangimports                (boolean)  default: true
+   --hidelongstrings                (boolean)  default: false
+   --hideutf                        (boolean)  default: true
+   --ignoreexceptions               (boolean)  default: false
+   --ignoreexceptionsalways         (boolean)  default: false
+   --importfilter                   (string)
+   --innerclasses                   (boolean)  default: true
+   --instanceofpattern              (boolean)  default: true if class file from version 60.0 (Java 16) or greater, or experimental in 58.0 (Java 14), 59.0 (Java 15)
+   --j14classobj                    (boolean)  default: false if class file from version 49.0 (Java 5) or greater
+   --jarfilter                      (string)
+   --labelledblocks                 (boolean)  default: true
+   --lenient                        (boolean)  default: false
+   --liftconstructorinit            (boolean)  default: true
+   --lomem                          (boolean)  default: false
+   --methodname                     (string)
+   --obfattr                        (boolean)  default: Value of option 'antiobf'
+   --obfcontrol                     (boolean)  default: Value of option 'antiobf'
+   --obfuscationpath                (string)
+   --outputdir                      (string)
+   --outputencoding                 (string)
+   --outputpath                     (string)
+   --override                       (boolean)  default: true if class file from version 50.0 (Java 6) or greater
+   --previewfeatures                (boolean)  default: true
+   --pullcodecase                   (boolean)  default: false
+   --recordtypes                    (boolean)  default: true if class file from version 60.0 (Java 16) or greater, or experimental in 58.0 (Java 14), 59.0 (Java 15)
+   --recover                        (boolean)  default: true
+   --recovertypeclash               (boolean)
+   --recovertypehints               (boolean)
+   --reducecondscope                (boolean)
+   --relinkconst                    (boolean)  default: true
+   --relinkconststring              (boolean)  default: Value of option 'relinkconst'
+   --removebadgenerics              (boolean)  default: true
+   --removeboilerplate              (boolean)  default: true
+   --removedeadconditionals         (boolean)
+   --removedeadmethods              (boolean)  default: true
+   --removeinnerclasssynthetics     (boolean)  default: true
+   --rename                         (boolean)  default: false
+   --renamedupmembers               (boolean)  default: Value of option 'rename'
+   --renameenumidents               (boolean)  default: Value of option 'rename'
+   --renameillegalidents            (boolean)  default: Value of option 'rename'
+   --renamesmallmembers             (int >= 0)  default: 0
+   --sealed                         (boolean)  default: true if class file from version 62.0 (Java 18) or greater, or experimental in 60.0 (Java 16), 61.0 (Java 17)
+   --showinferrable                 (boolean)  default: false if class file from version 51.0 (Java 7) or greater
+   --showversion                    (boolean)  default: true
+   --silent                         (boolean)  default: false
+   --skipbatchinnerclasses          (boolean)  default: true
+   --staticinitreturn               (boolean)  default: true
+   --stringbuffer                   (boolean)  default: false if class file from version 49.0 (Java 5) or greater
+   --stringbuilder                  (boolean)  default: true if class file from version 49.0 (Java 5) or greater
+   --stringconcat                   (boolean)  default: true if class file from version 53.0 (Java 9) or greater
+   --sugarasserts                   (boolean)  default: true
+   --sugarboxing                    (boolean)  default: true
+   --sugarenums                     (boolean)  default: true if class file from version 49.0 (Java 5) or greater
+   --sugarretrolambda               (boolean)  default: false
+   --switchexpression               (boolean)  default: true if class file from version 58.0 (Java 14) or greater, or experimental in 56.0 (Java 12), 57.0 (Java 13)
+   --tidymonitors                   (boolean)  default: true
+   --trackbytecodeloc               (boolean)  default: false
+   --tryresources                   (boolean)  default: true if class file from version 51.0 (Java 7) or greater
+   --usenametable                   (boolean)  default: true
+   --usesignatures                  (boolean)  default: true
+   --version                        (boolean)  default: true
+```
